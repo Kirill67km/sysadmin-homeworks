@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:12
+    container_name: postgres-container
+    environment:
+      POSTGRES_DB: test_db
+      POSTGRES_USER: test_admin_user
+      POSTGRES_PASSWORD: 1q2w3e4r
+    ports:
+      - "5432:5432"
+    volumes:
+      - /home/galchonkov/sysadm-homeworks/06-db-02-sql/data
+      - /home/galchonkov/sysadm-homeworks/06-db-02-sql/backups
