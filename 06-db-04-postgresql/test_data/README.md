@@ -9,18 +9,56 @@
 **Найдите и приведите** управляющие команды для:
 - вывода списка БД,
 
+```sql
+\l
+```
 
 - подключения к БД,
+
+```sql
+\c <database>
+```
+
 - вывода списка таблиц,
+
+```sql
+\dt
+```
+
 - вывода описания содержимого таблиц,
+
+```sql
+\d <table>
+```
+
 - выхода из psql.
+
+```sql
+\q
+```
 
 ## Задача 2
 
 Используя `psql`, создайте БД `test_database`.
+
+```sql
+CREATE DATABASE test_database;
+```
+
 Изучите [бэкап БД](https://github.com/netology-code/virt-homeworks/tree/virt-11/06-db-04-postgresql/test_data).
 
 Восстановите бэкап БД в `test_database`.
+
+```bash
+-- Выдаю максимальные права на дамп
+chmod 777 ./06-db-04-postgresql/test_data/backups/test_dump.sql
+
+-- Подключась к контейнеру
+sudo docker exec -ti postgres bash
+
+-- Восстанавливаю дамп
+psql -U test_admin_user -d test_database < ./test_dump.sql
+```
 
 Перейдите в управляющую консоль `psql` внутри контейнера.
 
