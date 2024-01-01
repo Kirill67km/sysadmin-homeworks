@@ -28,6 +28,8 @@ Hey, Netology
 - Соберите и отправьте созданный образ в свой dockerhub-репозитории c tag 1.0.0 . 
 - Предоставьте ответ в виде ссылки на https://hub.docker.com/<username_repo>/custom-nginx/general .
 
+![docker-repository](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/virtd/screenshots/nginx.png)
+
 ## Задача 2
 1. Запустите ваш образ custom-nginx:1.0.0 командой docker run в соответвии с требованиями:
 - имя контейнера "ФИО-custom-nginx-t2"
@@ -39,6 +41,7 @@ Hey, Netology
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
 
+![curl](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/virtd/screenshots/custom-nginx-t2.png)
 
 ## Задача 3
 1. Воспользуйтесь docker help или google, чтобы узнать как подключиться к стандартному потоку ввода/вывода/ошибок контейнера "custom-nginx-t2".
@@ -64,6 +67,8 @@ Hey, Netology
 12. Удалите запущенный контейнер "custom-nginx-t2", не останавливая его.(воспользуйтесь --help или google)
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
+
+![port81](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/virtd/screenshots/port81.png)
 
 ## Задача 4
 
@@ -100,10 +105,9 @@ vim ./data/netology2
 docker exec -ti 99e0afd529a0 /bin/bash
 ```
 
-
-
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
 
+![port81](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/virtd/screenshots/debian.png)
 
 ## Задача 5
 
@@ -154,8 +158,7 @@ services:
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод, файл compose.yaml , скриншот portainer c задеплоенным компоузом.
 
----
+![portainer](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/virtd/screenshots/portainer_nginx.png)
 
-### Правила приема
 
-Домашнее задание выполните в файле readme.md в GitHub-репозитории. В личном кабинете отправьте на проверку ссылку на .md-файл в вашем репозитории.
+![manifest](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/virtd/screenshots/rm-manifest.png)
