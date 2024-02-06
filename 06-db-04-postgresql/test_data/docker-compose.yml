@@ -3,7 +3,11 @@ version: '3'
 services:
   postgres:
     image: postgres:13
+<<<<<<< HEAD
     container_name: postgres
+=======
+    container_name: postgres-container
+>>>>>>> 1b0a0b0002fa11cbb3f7e0e548531c7ac0cc0716
     environment:
       POSTGRES_DB: test_db
       POSTGRES_USER: test_admin_user
