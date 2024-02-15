@@ -28,15 +28,34 @@
 
 1. Перейдите в каталог [**src**](https://github.com/netology-code/ter-homeworks/tree/main/01/src). Скачайте все необходимые зависимости, использованные в проекте. 
 2. Изучите файл **.gitignore**. В каком terraform-файле, согласно этому .gitignore, допустимо сохранить личную, секретную информацию?
+
+```В соответствии с указанным .gitignore файлом, допустимо сохранять личную, секретную информацию в файле с именем "personal.auto.tfvars" в директории проекта```
+
 3. Выполните код проекта. Найдите  в state-файле секретное содержимое созданного ресурса **random_password**, пришлите в качестве ответа конкретный ключ и его значение.
+
+![terraform_state](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/terraform/src/terraform_one_screenshots/terraform_state_1.png)
+
 4. Раскомментируйте блок кода, примерно расположенный на строчках 29–42 файла **main.tf**.
 Выполните команду ```terraform validate```. Объясните, в чём заключаются намеренно допущенные ошибки. Исправьте их.
+
+```В коде были пропущенные переменные, некоторые переменные начинались с цифры, а так же были опечатки```
+
 5. Выполните код. В качестве ответа приложите: исправленный фрагмент кода и вывод команды ```docker ps```.
+
+![terraform_docker](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/terraform/src/terraform_one_screenshots/terraform_docker_ps_1.2.png)
+
 6. Замените имя docker-контейнера в блоке кода на ```hello_world```. Не перепутайте имя контейнера и имя образа. Мы всё ещё продолжаем использовать name = "nginx:latest". Выполните команду ```terraform apply -auto-approve```.
 Объясните своими словами, в чём может быть опасность применения ключа  ```-auto-approve```. Догадайтесь или нагуглите зачем может пригодиться данный ключ? В качестве ответа дополнительно приложите вывод команды ```docker ps```.
-8. Уничтожьте созданные ресурсы с помощью **terraform**. Убедитесь, что все ресурсы удалены. Приложите содержимое файла **terraform.tfstate**. 
-9. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ **обязательно** подкрепите строчкой из документации [**terraform провайдера docker**](https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs).  (ищите в классификаторе resource docker_image )
 
+```Опасность применения ключа -auto-approve заключается в том, что вы не будете иметь возможности внимательно проверить изменения перед их применением```
+
+7. Уничтожьте созданные ресурсы с помощью **terraform**. Убедитесь, что все ресурсы удалены. Приложите содержимое файла **terraform.tfstate**.
+
+![terraform_state](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/terraform/src/terraform_one_screenshots/terraform_state_1.4.png)
+
+8. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ **обязательно** подкрепите строчкой из документации [**terraform провайдера docker**](https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs).  (ищите в классификаторе resource docker_image )
+
+```В main.tf усиановлен параметр "keep_locally = true"]```
 
 ------
 
