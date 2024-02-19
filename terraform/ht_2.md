@@ -39,19 +39,32 @@
 - скриншот консоли, curl должен отобразить тот же внешний ip-адрес;
 - ответы на вопросы.
 
+![pc](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/terraform/src/terraform_2/pc_1.png)
+
+![ssh-curl](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/terraform/src/terraform_2/ssh_1.png)
+
+```В процессе обучения могут пригодиться параметры preemptible = true и core_fraction=5 в параметрах ВМ для экономии месячного расходования денежных ресурсов```
+
 
 ### Задание 2
 
 1. Замените все хардкод-**значения** для ресурсов **yandex_compute_image** и **yandex_compute_instance** на **отдельные** переменные. К названиям переменных ВМ добавьте в начало префикс **vm_web_** .  Пример: **vm_web_name**.
 2. Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их **default** прежними значениями из main.tf. 
-3. Проверьте terraform plan. Изменений быть не должно. 
+3. Проверьте terraform plan. Изменений быть не должно.
 
+![variables_1](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/terraform/src/terraform_2/variables_2.png)
+
+![variables_2](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/terraform/src/terraform_2/variables_2_1.png)
 
 ### Задание 3
 
 1. Создайте в корне проекта файл 'vms_platform.tf' . Перенесите в него все переменные первой ВМ.
 2. Скопируйте блок ресурса и создайте с его помощью вторую ВМ в файле main.tf: **"netology-develop-platform-db"** ,  ```cores  = 2, memory = 2, core_fraction = 20```. Объявите её переменные с префиксом **vm_db_** в том же файле ('vms_platform.tf').  ВМ должна работать в зоне "ru-central1-b"
 3. Примените изменения.
+
+![db_1](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/terraform/src/terraform_2/db_instance_3_1.png)
+
+![db_2](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/terraform/src/terraform_2/db_instance_3_2.png)
 
 
 ### Задание 4
@@ -61,6 +74,7 @@
 
 В качестве решения приложите вывод значений ip-адресов команды ```terraform output```.
 
+![output](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/terraform/src/terraform_2/outputs_4.png)
 
 ### Задание 5
 
@@ -68,6 +82,7 @@
 2. Замените переменные внутри ресурса ВМ на созданные вами local-переменные.
 3. Примените изменения.
 
+![locals](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/terraform/src/terraform_2/locals_5.png)
 
 ### Задание 6
 
@@ -100,6 +115,8 @@
   
 5. Найдите и закоментируйте все, более не используемые переменные проекта.
 6. Проверьте terraform plan. Изменений быть не должно.
+
+![map](https://github.com/Kirill67km/sysadmin-homeworks/blob/main/terraform/src/terraform_2/map_4_1.png)
 
 ------
 
