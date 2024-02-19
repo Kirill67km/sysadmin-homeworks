@@ -128,4 +128,11 @@ variable "vms_resources" {
     core_fraction = 20
     }
   }
+  variable "metadata" {
+  type        = map(map(number))
+  default     = {
+  serial-port-enable = 1
+  ssh-keys           = "ubuntu:${var.vms_ssh_root_key}"
+    }
+  }
 }
