@@ -48,11 +48,11 @@ variable "vm_web_family" {
   description = "family"
 }
 
-variable "vm_web_name" {
-  type        = string
-  default     = "netology-develop-platform-web"
-  description = "web_name"
-}
+#variable "vm_web_name" {
+#  type        = string
+#  default     = "netology-develop-platform-web"
+#  description = "web_name"
+#}
 
 variable "vm_web_platform" {
   type        = string
@@ -60,29 +60,29 @@ variable "vm_web_platform" {
   description = "web_platform"
 }
 
-variable "vm_web_cores" {
-  type        = string
-  default     = "2"
-  description = "web_cores"
-}
+#variable "vm_web_cores" {
+#  type        = string
+#  default     = "2"
+#  description = "web_cores"
+#}
 
-variable "vm_web_memory" {
-  type        = string
-  default     = "4"
-  description = "web_memory"
-}
+#variable "vm_web_memory" {
+#  type        = string
+#  default     = "4"
+#  description = "web_memory"
+#}
 
-variable "vm_web_core_fraction" {
-  type        = string
-  default     = "5"
-  description = "web_cores_fraction"
-}
+#variable "vm_web_core_fraction" {
+#  type        = string
+#  default     = "5"
+#  description = "web_cores_fraction"
+#}
 
-variable "vm_db_name" {
-  type        = string
-  default     = "netology-develop-platform-db"
-  description = "web_name"
-}
+#variable "vm_db_name" {
+#  type        = string
+#  default     = "netology-develop-platform-db"
+#  description = "web_name"
+#}
 
 variable "vm_db_platform" {
   type        = string
@@ -90,23 +90,23 @@ variable "vm_db_platform" {
   description = "db_platform"
 }
 
-variable "vm_db_cores" {
-  type        = string
-  default     = "2"
-  description = "db_cores"
-}
+#variable "vm_db_cores" {
+#  type        = string
+#  default     = "2"
+#  description = "db_cores"
+#}
 
-variable "vm_db_memory" {
-  type        = string
-  default     = "2"
-  description = "db_memory"
-}
+#variable "vm_db_memory" {
+#  type        = string
+#  default     = "2"
+#  description = "db_memory"
+#}
 
-variable "vm_db_core_fraction" {
-  type        = string
-  default     = "20"
-  description = "db_cores_fraction"
-}
+#variable "vm_db_core_fraction" {
+#  type        = string
+#  default     = "20"
+#  description = "db_cores_fraction"
+#}
 
 variable "vm_db_zone" {
   type        = string
@@ -126,6 +126,13 @@ variable "vms_resources" {
     cores         = 2
     memory        = 2
     core_fraction = 20
+    }
+  }
+  variable "metadata" {
+  type        = map(map(number))
+  default     = {
+  serial-port-enable = 1
+  ssh-keys           = "ubuntu:${var.vms_ssh_root_key}"
     }
   }
 }
