@@ -12,8 +12,8 @@ data "yandex_compute_image" "ubuntu" {
   family = var.vm_web_family #"ubuntu-2004-lts"
 }
 resource "yandex_compute_instance" "default" {
-  name        = local.vm_web_instance_name    
-  platform_id = var.vm_web_platform 
+  name        = local.vm_web_instance_name    #"netology-develop-platform-web"
+  platform_id = var.vm_web_platform #"standard-v1"
   resources {
     cores         = var.vms_resources.vm_web_resources.cores #2
     memory        = var.vms_resources.vm_web_resources.memory #4
