@@ -1,0 +1,12 @@
+version: '3'
+services:
+  netology-01:
+    image: pycontribs/centos:7
+    container_name: clickhouse-01
+    restart: unless-stopped
+    entrypoint: "sleep infinity"
+  netology-02:
+    image: pycontribs/centos:7
+    container_name: vector-01
+    restart: unless-stopped
+    entrypoint: "sleep infinity"
