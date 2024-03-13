@@ -33,6 +33,8 @@
 
 ![task_1](https://github.com/Kirill67km/sysadmin-homeworks/blob/terraform-03/terraform/src/terraform_3/security_1.png)
 
+![task_1_1](https://github.com/Kirill67km/sysadmin-homeworks/blob/terraform-03/terraform/src/terraform_3/security.png)
+
 ------
 
 ### Задание 2
@@ -52,6 +54,8 @@ variable "each_vm" {
 ![task_2_1](https://github.com/Kirill67km/sysadmin-homeworks/blob/terraform-03/terraform/src/terraform_3/count_2_1.png)
 
 ![task_2_2](https://github.com/Kirill67km/sysadmin-homeworks/blob/terraform-03/terraform/src/terraform_3/each_2_2.png)
+
+![task_2_3](https://github.com/Kirill67km/sysadmin-homeworks/blob/terraform-03/terraform/src/terraform_3/web1-security.png)
 
 ------
 
