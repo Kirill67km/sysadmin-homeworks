@@ -6,7 +6,7 @@ resource "yandex_compute_instance" "db" {
   depends_on  = [yandex_compute_instance.web ]
   for_each = { for s in var.vms_settings: index(var.vms_settings,s)=> s }
   name        = each.value.vm_name
-  platform_id = "standard-v1"
+  platform_id = var.vms_defset.platform_id
    
 
   resources {
@@ -18,7 +18,7 @@ resource "yandex_compute_instance" "db" {
   boot_disk {
     initialize_params {
       image_id = data.yandex_compute_image.ubuntu-2004-lts.image_id
-      type =  "network-hdd"
+      type =  var.vms_defset.disktype
       size = each.value.disk
     }   
   }

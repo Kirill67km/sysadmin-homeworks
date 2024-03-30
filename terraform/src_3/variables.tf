@@ -52,3 +52,16 @@ variable "vms_settings"{
     disk=20
   }]
 }
+
+variable "vms_defset"{
+  type=object({platform_id=string,disktype=string,disksize=number,resources=map(number)})
+  default={
+    platform_id = "standard-v1"
+    disktype = "network-hdd"
+    disksize = 5
+    resources = {
+      cpu=2
+      ram=8  
+    }
+  }
+} 

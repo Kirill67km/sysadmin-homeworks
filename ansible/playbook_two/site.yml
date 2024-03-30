@@ -8,27 +8,37 @@
         name: clickhouse-server
         state: restarted
   tasks:
-    - name: Mess with clickhouse distrib
-      block:
+    - block:
         - name: Get clickhouse distrib
           ansible.builtin.get_url:
-            url: "https://packages.clickhouse.com/rpm/stable/{{ item }}-{{ clickhouse_version }}.noarch.rpm"
-            dest: "./{{ item }}-{{ clickhouse_version }}.rpm"
-            mode: "0644"
+            url: "https://packages.clickhouse.com/deb/pool/main/c/{{ item }}/{{ item }}_{{ clickhouse_version }}_amd64.deb"
+            dest: "./{{ item }}_{{ clickhouse_version }}_amd64.deb"
           with_items: "{{ clickhouse_packages }}"
       rescue:
-        - name: Get clickhouse distrib (rescue)
+        - name: Get clickhouse distrib
           ansible.builtin.get_url:
-            url: "https://packages.clickhouse.com/rpm/stable/clickhouse-common-static-{{ clickhouse_version }}.x86_64.rpm"
-            dest: "./clickhouse-common-static-{{ clickhouse_version }}.rpm"
-            mode: "0644"
-    - name: Install clickhouse packages
+            url: "https://packages.clickhouse.com/deb/pool/main/c/clickhouse-common-static/clickhouse-common-static_{{ clickhouse_version }}_amd64.deb"
+            dest: "./clickhouse-common-static_{{ clickhouse_version }}_amd64.deb"
+    - name: Install clickhouse client
       become: true
-      ansible.builtin.yum:
-        name:
-          - clickhouse-common-static-{{ clickhouse_version }}.rpm
-          - clickhouse-client-{{ clickhouse_version }}.rpm
-          - clickhouse-server-{{ clickhouse_version }}.rpm
+      ansible.builtin.apt:
+        deb: /home/galchonkov/clickhouse-client_22.8.5.29_amd64.deb
+        state: present
+        update_cache: yes
+      notify: Start clickhouse service
+    - name: Install clickhouse server
+      become: true
+      ansible.builtin.apt:
+        deb: /home/galchonkov/clickhouse-server_22.8.5.29_amd64.deb
+        state: present
+        update_cache: yes
+      notify: Start clickhouse service
+    - name: Install clickhouse common-static
+      become: true
+      ansible.builtin.apt:
+        deb: /home/galchonkov/clickhouse-common-static_22.8.5.29_amd64.deb
+        state: present
+        update_cache: yes
       notify: Start clickhouse service
     - name: Flush handlers to restart clickhouse
       ansible.builtin.meta: flush_handlers
@@ -50,15 +60,60 @@
   tasks:
     - name: Get vector distrib
       ansible.builtin.get_url:
-        url: "https://packages.timber.io/vector/{{ vector_version }}/vector-{{ vector_version }}-1.x86_64.rpm"
-        dest: "./vector-{{ vector_version }}.rpm"
+        url: "https://packages.timber.io/vector/{{ vector_version }}/vector_{{ vector_version }}-1_amd64.deb"
+        dest: "./vector_{{ vector_version }}-1_amd64.deb"
         validate_certs: false
         mode: "0644"
       notify: Start vector service
     - name: Install vector packages
       become: true
-      ansible.builtin.yum:
-        name:
-          - vector-{{ vector_version }}.rpm
+      ansible.builtin.apt:
+        deb: /home/galchonkov/vector_{{ vector_version }}-1_amd64.deb
+        state: present
+        update_cache: yes
     - name: Flush handlers to restart vector
       ansible.builtin.meta: flush_handlers
+
+- name: Install and configure LightHouse
+  hosts: lighthouse
+  remote_user: galchonkov
+  become: true
+  tasks:
+    - name: Install git
+      ansible.builtin.apt:
+        name: git
+        state: present
+
+    - name: Clone LightHouse repository
+      ansible.builtin.git:
+        repo: https://github.com/VKCOM/lighthouse.git
+        dest: /opt/lighthouse
+        version: master
+
+    - name: Install Nginx
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+
+    - name: Set permissions for /var/www/html
+      become: true
+      ansible.builtin.file:
+        path: /var/www/html
+        owner: galchonkov
+        group: root
+        mode: '0755'
+        recurse: yes
+
+    - name: Configure Nginx
+      ansible.builtin.copy:
+        src: /opt/lighthouse/index.html
+        dest: /var/www/html/index.html
+        remote_src: yes
+        owner: galchonkov
+        group: galchonkov
+        mode: '0644'
+
+    - name: Start Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
