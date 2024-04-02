@@ -1,0 +1,5 @@
+---
+- name: clickhouse
+  src: https://github.com/Kirill67km/sysadmin-homeworks.git
+  scm: git
+  version: v3.0

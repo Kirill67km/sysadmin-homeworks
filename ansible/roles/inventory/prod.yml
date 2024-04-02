@@ -1,0 +1,24 @@
+---
+clickhouse:
+  hosts:
+    clickhouse-01:
+      ansible_host: 51.250.91.150
+      ansible_connection: ssh
+      ansible_user: galchonkov
+      ansible_ssh_private_key_file: /home/galchonkov/.ssh/id_ed25519
+      
+vector:
+  hosts:
+    vector-01:
+      ansible_host: 158.160.57.134
+      ansible_connection: ssh
+      ansible_user: galchonkov
+      ansible_ssh_private_key_file: /home/galchonkov/.ssh/id_ed25519
+
+lighthouse:
+  hosts:
+    lighthouse-01:
+      ansible_host: 158.160.35.221
+      ansible_connection: ssh
+      ansible_user: galchonkov
+      ansible_ssh_private_key_file: /home/galchonkov/.ssh/id_ed25519
