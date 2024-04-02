@@ -6,28 +6,8 @@
 
 - name: Install vector
   hosts: vector
-  handlers:
-    - name: Start vector service
-      become: true
-      ansible.builtin.service:
-        name: vector
-        state: restarted
-  tasks:
-    - name: Get vector distrib
-      ansible.builtin.get_url:
-        url: "https://packages.timber.io/vector/{{ vector_version }}/vector_{{ vector_version }}-1_amd64.deb"
-        dest: "./vector_{{ vector_version }}-1_amd64.deb"
-        validate_certs: false
-        mode: "0644"
-      notify: Start vector service
-    - name: Install vector packages
-      become: true
-      ansible.builtin.apt:
-        deb: /home/galchonkov/vector_{{ vector_version }}-1_amd64.deb
-        state: present
-        update_cache: yes
-    - name: Flush handlers to restart vector
-      ansible.builtin.meta: flush_handlers
+  roles:
+    - vector
 
 - name: Install and configure LightHouse
   hosts: lighthouse
