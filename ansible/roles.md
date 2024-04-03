@@ -43,4 +43,6 @@
 
 Выполненное домашнее задание пришлите в виде ссылки на .md-файл в вашем репозитории.
 
+https://github.com/Kirill67km/sysadmin-homeworks/tree/hometask/ansible/roles
+
 ---
