@@ -1,2 +1,40 @@
 ---
 # tasks file for lighthouse
+- name: Install git
+  ansible.builtin.apt:
+    name: git
+    state: present
+
+- name: Clone LightHouse repository
+  ansible.builtin.git:
+    repo: https://github.com/VKCOM/lighthouse.git
+    dest: /opt/lighthouse
+    version: master
+
+- name: Install Nginx
+  ansible.builtin.apt:
+    name: nginx
+    state: present
+
+- name: Set permissions for /var/www/html
+  become: true
+  ansible.builtin.file:
+    path: /var/www/html
+    owner: galchonkov
+    group: root
+    mode: '0755'
+    recurse: yes
+
+- name: Configure Nginx
+  ansible.builtin.copy:
+    src: /opt/lighthouse/index.html
+    dest: /var/www/html/index.html
+    remote_src: yes
+    owner: galchonkov
+    group: galchonkov
+    mode: '0644'
+
+- name: Start Nginx
+  ansible.builtin.service:
+    name: nginx
+    state: started

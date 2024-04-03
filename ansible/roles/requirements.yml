@@ -6,4 +6,4 @@
 - name: vector
   src: https://github.com/Kirill67km/sysadmin-homeworks.git
   scm: git
-  version: v3.2
+  version: v3.2.1
