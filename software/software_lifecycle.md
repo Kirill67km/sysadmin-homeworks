@@ -38,6 +38,26 @@
 
 ---
 
+![jira_one](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/Снимок%20экрана%202024-04-06%20в%2014.19.42.png)
+
+![jira_two](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/Снимок%20экрана%202024-04-06%20в%2014.24.28.png)
+
+![jira_three](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/Снимок%20экрана%202024-04-08%20в%2020.39.41.png)
+
+![jira_four](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/Снимок%20экрана%202024-04-08%20в%2020.47.42.png)
+
+![jira_five](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/Снимок%20экрана%202024-04-08%20в%2020.53.46.png)
+
+![jira_six](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/Снимок%20экрана%202024-04-08%20в%2020.53.58.png)
+
+![jira_seven](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/Снимок%20экрана%202024-04-08%20в%2020.54.53.png)
+
+[Bug.xml](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/Bug.xml)
+
+[Others.xml](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/Others.xml)
+
+
+
 ### Как оформить решение задания
 
 Выполненное домашнее задание пришлите в виде ссылки на .md-файл в вашем репозитории.
