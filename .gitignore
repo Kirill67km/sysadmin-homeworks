@@ -3,3 +3,4 @@ personal.auto.tfvars
 key.json
 terraform.tfstate.backup
 personal.auto.tfvars
+files/*.pub
