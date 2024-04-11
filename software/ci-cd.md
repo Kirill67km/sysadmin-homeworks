@@ -11,6 +11,8 @@
 7.  Проверьте готовность Nexus через [бразуер](http://localhost:8081).
 8. Подключитесь под admin\admin123, поменяйте пароль, сохраните анонимный доступ.
 
+![playbook](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/playbook.png)
+
 ## Знакомоство с SonarQube
 
 ### Основная часть
@@ -24,6 +26,12 @@
 7. Исправьте ошибки, которые он выявил, включая warnings.
 8. Запустите анализатор повторно — проверьте, что QG пройдены успешно.
 9. Сделайте скриншот успешного прохождения анализа, приложите к решению ДЗ.
+
+![sonar-scanner](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/sonar-scanner.png)
+
+![scan-file-one](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/scan-file-one.png)
+
+![scan-file-two](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/scan-file-two.png)
 
 ## Знакомство с Nexus
 
@@ -41,6 +49,8 @@
 3. Проверьте, что все файлы загрузились успешно.
 4. В ответе пришлите файл `maven-metadata.xml` для этого артефекта.
 
+[maven-metadata.xml](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/ansible-ci-cd/playbook/mvn/maven-metadata.xml)
+
 ### Знакомство с Maven
 
 ### Подготовка к выполнению
@@ -57,6 +67,12 @@
 2. Запустите команду `mvn package` в директории с `pom.xml`, ожидайте успешного окончания.
 3. Проверьте директорию `~/.m2/repository/`, найдите ваш артефакт.
 4. В ответе пришлите исправленный файл `pom.xml`.
+
+![build-mvn](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/build-mvn.png)
+
+![artefact](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/artefact.png)
+
+[pom.xml](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/ansible-ci-cd/playbook/mvn/pom.xml)
 
 ---
 
