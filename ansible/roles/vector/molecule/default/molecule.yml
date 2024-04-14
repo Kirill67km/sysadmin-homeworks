@@ -3,7 +3,3 @@ platforms:
   - name: Ubuntu
     versions:
       - 22
-provisioner:
-  name: ansible
-verifier:
-  name: ansible
