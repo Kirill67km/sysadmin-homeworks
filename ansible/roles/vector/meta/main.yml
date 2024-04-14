@@ -1,6 +1,7 @@
 galaxy_info:
-  role_name: vector
   author: Kirill Galchonkov
-  description: Install vector packages
+  company: your company (optional)
+  galaxy_tags: []
   license: MIT
   min_ansible_version: 2.1
+  platforms: [{'name': 'Ubuntu', 'versions': [22]}]
