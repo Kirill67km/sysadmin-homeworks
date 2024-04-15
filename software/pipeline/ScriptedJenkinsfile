@@ -1,0 +1,17 @@
+node("linux"){
+    stage("Git checkout my") {
+        git branch: 'hometask', credentialsId: '990687d1-cf0c-4acd-9093-10140dac2968', url: 'git@github.com:Kirill67km/sysadmin-homeworks.git'
+    }
+    stage("Sample define secret_check"){
+        secret_check=true
+    }
+    stage("Run playbook"){
+        if (prod_run == 'True'){
+            sh 'ansible-playbook ansible/playbook_two/site.yml -i inventory/prod.yml'
+        }
+        else{ 
+            sh 'ansible-playbook ansible/playbook_twosite.yml -i inventory/prod.yml --check --diff'
+        }
+        
+    }
+}
