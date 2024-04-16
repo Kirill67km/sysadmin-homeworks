@@ -1,0 +1,25 @@
+pipeline {
+    agent {
+        label 'linux'
+    }
+    stages {
+        stage('Clear work dir') {
+            steps {
+                deleteDir()
+            }
+        }
+        stage('Clone git repo') {
+            steps {
+                dir('sysadmin-homeworks/ansible/roles/vector/') {
+                git branch: 'hometask', url: 'git@github.com:Kirill67km/sysadmin-homeworks.git'
+                }
+            }
+        }
+        stage('Info test') {
+            steps {
+                sh 'cd sysadmin-homeworks/ansible/roles/vector/'
+                sh 'ansible-galaxy info vector'
+                }
+        }
+    }
+}

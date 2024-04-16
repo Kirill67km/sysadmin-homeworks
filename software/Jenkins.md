@@ -10,14 +10,33 @@
 ## Основная часть
 
 1. Сделать Freestyle Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
-2. Сделать Declarative Pipeline Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
-3. Перенести Declarative Pipeline в репозиторий в файл `Jenkinsfile`.
-4. Создать Multibranch Pipeline на запуск `Jenkinsfile` из репозитория.
-5. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](./pipeline).
-6. Внести необходимые изменения, чтобы Pipeline запускал `ansible-playbook` без флагов `--check --diff`, если не установлен параметр при запуске джобы (prod_run = True). По умолчанию параметр имеет значение False и запускает прогон с флагами `--check --diff`.
-7. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл `ScriptedJenkinsfile`.
-8. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
-9. Сопроводите процесс настройки скриншотами для каждого пункта задания!!
+
+![freestyle](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/freestyle.png)
+
+3. Сделать Declarative Pipeline Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
+
+![declarative](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/declarative.png)
+
+5. Перенести Declarative Pipeline в репозиторий в файл `Jenkinsfile`.
+6. Создать Multibranch Pipeline на запуск `Jenkinsfile` из репозитория.
+
+![multibranch](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/multibranch.png)
+
+![multibranch_two](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/multibranch_two.png)
+
+8. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](./pipeline).
+
+![scripted_jenkins](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/scripted_jenkins.png)
+
+10. Внести необходимые изменения, чтобы Pipeline запускал `ansible-playbook` без флагов `--check --diff`, если не установлен параметр при запуске джобы (prod_run = True). По умолчанию параметр имеет значение False и запускает прогон с флагами `--check --diff`.
+11. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл `ScriptedJenkinsfile`.
+12. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
+
+[Declarative Pipeline](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/ansible-jenkins/Jenkinsfile)
+
+[Scripted Pipeline](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/pipeline/ScriptedJenkinsfile)
+
+13. Сопроводите процесс настройки скриншотами для каждого пункта задания!!
 
 ## Необязательная часть
 
