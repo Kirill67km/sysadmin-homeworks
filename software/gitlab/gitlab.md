@@ -25,7 +25,13 @@
 4. Создана директория `/python_api`.
 5. Скрипт из репозитория размещён в /python_api.
 6. Точка вызова: запуск скрипта.
-7. При комите в любую ветку должен собираться docker image с форматом имени hello:gitlab-$CI_COMMIT_SHORT_SHA . Образ должен быть выложен в Gitlab registry или yandex registry.   
+7. При комите в любую ветку должен собираться docker image с форматом имени hello:gitlab-$CI_COMMIT_SHORT_SHA . Образ должен быть выложен в Gitlab registry или yandex registry.
+
+[Репозиторий с файлом](https://gitlab.com/Kirill67km/netology/-/tree/main)
+
+![build_one](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/build_one.png)
+
+![build_two](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/build_two.png)
 
 ### Product Owner
 
@@ -35,6 +41,8 @@
 2. Текст с `{ "message": "Already started" }` на `{ "message": "Running"}`.
 3. Issue поставить label: feature.
 
+![issue](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/issue.png)
+
 ### Developer
 
 Пришёл новый Issue на доработку, вам нужно:
@@ -43,6 +51,7 @@
 2. Внести изменения по тексту из задания.
 3. Подготовить Merge Request, влить необходимые изменения в `master`, проверить, что сборка прошла успешно.
 
+![curl](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/curl.png)
 
 ### Tester
 
@@ -50,6 +59,8 @@
 
 1. Поднять докер-контейнер с образом `python-api:latest` и проверить возврат метода на корректность.
 2. Закрыть Issue с комментарием об успешности прохождения, указав желаемый результат и фактически достигнутый.
+
+![test](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/software/screenshots/test.png)
 
 ## Итог
 
