@@ -73,6 +73,9 @@
 
 P.S.: если при запуске некоторые контейнеры будут падать с ошибкой - проставьте им режим `Z`, например
 `./data:/var/lib:Z`
+
+![cronograf](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/monitoring/img/cronograf.png)
+
 #
 8. Перейдите в веб-интерфейс Chronograf (http://localhost:8888) и откройте вкладку Data explorer.
         
@@ -109,6 +112,10 @@ P.S.: если при запуске некоторые контейнеры б�
 
 После настройке перезапустите telegraf, обновите веб интерфейс и приведите скриншотом список `measurments` в 
 веб-интерфейсе базы telegraf.autogen . Там должны появиться метрики, связанные с docker.
+
+![cronograf](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/monitoring/img/cronograf_docker_list.png)
+
+![cronograf](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/monitoring/img/cronograf_docker_query.png)
 
 Факультативно можете изучить какие метрики собирает telegraf после выполнения данного задания.
 
