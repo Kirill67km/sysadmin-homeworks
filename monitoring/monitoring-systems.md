@@ -113,7 +113,7 @@ P.S.: если при запуске некоторые контейнеры б�
 После настройке перезапустите telegraf, обновите веб интерфейс и приведите скриншотом список `measurments` в 
 веб-интерфейсе базы telegraf.autogen . Там должны появиться метрики, связанные с docker.
 
-![cronograf](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/monitoring/img/cronograf_docker_list.png)
+![cronograf](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/monitoring/img/chronograf_docker_list.png)
 
 ![cronograf](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/monitoring/img/cronograf_docker_query.png)
 
