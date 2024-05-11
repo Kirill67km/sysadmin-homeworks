@@ -9,6 +9,8 @@
 1. Подключите поднятый вами prometheus, как источник данных.
 1. Решение домашнего задания — скриншот веб-интерфейса grafana со списком подключенных Datasource.
 
+![add_prometheus](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/monitoring/img/grafana_prm.png)
+
 ## Задание 2
 
 Изучите самостоятельно ресурсы:
@@ -26,10 +28,14 @@
 
 Для решения этого задания приведите promql-запросы для выдачи этих метрик, а также скриншот получившейся Dashboard.
 
+![grafana_dashbord](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/monitoring/img/grafana_dash.png)
+
 ## Задание 3
 
 1. Создайте для каждой Dashboard подходящее правило alert — можно обратиться к первой лекции в блоке «Мониторинг».
 1. В качестве решения задания приведите скриншот вашей итоговой Dashboard.
+
+![grafana_alert](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/monitoring/img/grafana_alert.png)
 
 ## Задание 4
 
