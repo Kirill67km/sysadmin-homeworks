@@ -4,3 +4,4 @@ key.json
 terraform.tfstate.backup
 personal.auto.tfvars
 files/*.pub
+sandbox/
