@@ -44,11 +44,23 @@ Filebeat следует сконфигурировать для отправки
 - docker-compose манифест (если вы не использовали директорию help);
 - ваши yml-конфигурации для стека (если вы не использовали директорию help).
 
+![docker_ps](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/monitoring/img/docker_ps.png)
+
+![elk_main](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/monitoring/img/elk_main.png)
+
 ## Задание 2
 
 Перейдите в меню [создания index-patterns  в kibana](http://localhost:5601/app/management/kibana/indexPatterns/create) и создайте несколько index-patterns из имеющихся.
 
+![netology_index](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/monitoring/img/netology_index.png)
+
 Перейдите в меню просмотра логов в kibana (Discover) и самостоятельно изучите, как отображаются логи и как производить поиск по логам.
+
+![logs_one](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/monitoring/img/logs_one.png)
+
+![containers_elk](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/monitoring/img/containers_elk.png)
+
+![messages_elk](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/monitoring/img/messages_elk.png)
 
 В манифесте директории help также приведенно dummy-приложение, которое генерирует рандомные события в stdout-контейнера.
 Эти логи должны порождать индекс logstash-* в elasticsearch. Если этого индекса нет — воспользуйтесь советами и источниками из раздела «Дополнительные ссылки» этого задания.
