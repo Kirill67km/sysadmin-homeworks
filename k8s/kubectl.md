@@ -65,12 +65,24 @@
 2. Установить dashboard.
 3. Сгенерировать сертификат для подключения к внешнему ip-адресу.
 
+![microk8s](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/k8s/screenshots/microk8s.png)
+
+![certs](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/k8s/screenshots/microk8s_certs.png)
+
 ------
 
 ### Задание 2. Установка и настройка локального kubectl
 1. Установить на локальную машину kubectl.
 2. Настроить локально подключение к кластеру.
 3. Подключиться к дашборду с помощью port-forward.
+
+![kubectl_version](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/k8s/screenshots/kubectl_version.png)
+
+![kubectl_port](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/k8s/screenshots/microk8s_port.png)
+
+![kubectl_get_nodes](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/k8s/screenshots/kubectl_get_nodes.png)
+
+![dashboard_ui](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/k8s/screenshots/dashboard_ui.png)
 
 ------
 
