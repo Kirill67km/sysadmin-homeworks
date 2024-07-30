@@ -30,6 +30,12 @@
 4. Создать Service, который обеспечит доступ до реплик приложений из п.1.
 5. Создать отдельный Pod с приложением multitool и убедиться с помощью `curl`, что из пода есть доступ до приложений из п.1.
 
+![nginx_deployment_one_scale](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/k8s/screenshots/nginx_deployment_one_scale.png)
+
+![nginx_deployment_two_scale](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/k8s/screenshots/nginx_deployment_two_scale.png)
+
+![curl_service](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/k8s/screenshots/curl_service.png)
+
 ------
 
 ### Задание 2. Создать Deployment и обеспечить старт основного контейнера при выполнении условий
@@ -38,6 +44,14 @@
 2. Убедиться, что nginx не стартует. В качестве Init-контейнера взять busybox.
 3. Создать и запустить Service. Убедиться, что Init запустился.
 4. Продемонстрировать состояние пода до и после запуска сервиса.
+
+![init_without_service](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/k8s/screenshots/init_without_service.png)
+
+![init_without_service_logs](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/k8s/screenshots/init_without_service_logs.png)
+
+![init_with_service](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/k8s/screenshots/init_with_service.png)
+
+![init_with_service_logs](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/k8s/screenshots/init_with_service_logs.png)
 
 ------
 
