@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multitool
+  labels:
+    app: my-app
+spec:
+  containers:
+  - name: multitool
+    image: praqma/network-multitool
+    ports:
+    env: 
+      - name: HTTP_PORT
+        value: "31080"
