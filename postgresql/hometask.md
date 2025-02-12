@@ -32,3 +32,7 @@
 * зайти вторым ssh (вторая сессия)
 * запустить везде psql из под пользователя postgres
 * выключить auto commit
+
+![AC1](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_5.png)
+
+![AC2](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_6.png)
