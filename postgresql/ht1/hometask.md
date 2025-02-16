@@ -18,24 +18,24 @@
 * создать новый проект в Яндекс облако
 * далее создать инстанс виртуальной машины с дефолтными параметрами
 
-![YandexCloud](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_1.png)
+![YandexCloud](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_1.png)
 
 * добавить свой ssh ключ в metadata ВМ
 * зайти удаленным ssh (первая сессия), не забывайте про ssh-add
 
-![SSH](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_2.png)
+![SSH](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_2.png)
 
 * поставить PostgreSQL
 
-![PSQL](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_4.png)
+![PSQL](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_4.png)
 
 * зайти вторым ssh (вторая сессия)
 * запустить везде psql из под пользователя postgres
 * выключить auto commit
 
-![AC1](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_5.png)
+![AC1](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_5.png)
 
-![AC2](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_6.png)
+![AC2](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_6.png)
 
 ## Задание 2. Создание таблицы и наполнение ее данными. Ответы на вопросы
 
@@ -48,7 +48,7 @@ INSERT into persons(first_name, second_name) values('petr', 'petrov');
 COMMIT;
 ```
 
-![SQL-запрос](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_6.png)
+![SQL-запрос](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_6.png)
 
 
 * посмотреть текущий уровень изоляции: show transaction isolation level
@@ -56,7 +56,7 @@ COMMIT;
 ``` sql
 SHOW transaction isolation level;
 ```
-![SQL-запрос-2](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_7.png)
+![SQL-запрос-2](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_7.png)
 
 * начать новую транзакцию в обоих сессиях с дефолтным (не меняя) уровнем изоляции
 
@@ -64,7 +64,7 @@ SHOW transaction isolation level;
 START TRANSACTION;
 ```
 
-![SQL-запрос-3](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_8.png)
+![SQL-запрос-3](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_8.png)
 
 * в первой сессии добавить новую запись 
 
@@ -72,7 +72,7 @@ START TRANSACTION;
 INSERT INTO persons(first_name, second_name) VALUES('sergey', 'sergeev');
 ```
 
-![SQL-запрос-4](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_9.png)
+![SQL-запрос-4](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_9.png)
 
 * выполнить во второй сессии select from persons
 
@@ -80,7 +80,7 @@ INSERT INTO persons(first_name, second_name) VALUES('sergey', 'sergeev');
 SELECT * from persons;
 ```
 
-![SQL-запрос-5](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_10.png)
+![SQL-запрос-5](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_10.png)
 
 ---
 Видите ли вы новую запись и если да то почему?
@@ -99,9 +99,9 @@ COMMIT;
 SELECT * from persons;
 ```
 
-![SQL-запрос-6](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_11.png)
+![SQL-запрос-6](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_11.png)
 
-![SQL-запрос-7](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_12.png)
+![SQL-запрос-7](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_12.png)
 
 ---
 Видите ли вы новую запись и если да то почему?
@@ -133,9 +133,9 @@ INSERT into persons(first_name, second_name) values('liza', 'lizova');
 SELECT * from persons;
 ```
 
-![SQL-запрос-8](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_13.png)
+![SQL-запрос-8](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_13.png)
 
-![SQL-запрос-9](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_14.png)
+![SQL-запрос-9](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_14.png)
 
 ---
 Видите ли вы новую запись и если да то почему?
@@ -153,9 +153,9 @@ COMMIT;
 SELECT * from persons;
 ```
 
-![SQL-запрос-10](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_15.png)
+![SQL-запрос-10](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_15.png)
 
-![SQL-запрос-11](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_16.png)
+![SQL-запрос-11](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_16.png)
 
 ---
 Видите ли вы новую запись и если да то почему?
@@ -165,7 +165,7 @@ SELECT * from persons;
 
 * завершить вторую транзакцию и сделать запрос данных во второй 
 
-![SQL-запрос-12](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/img/psql_17.png)
+![SQL-запрос-12](https://github.com/Kirill67km/sysadmin-homeworks/blob/hometask/postgresql/ht1/img/psql_17.png)
 
 ---
 Видите ли вы новую запись и если да то почему?
